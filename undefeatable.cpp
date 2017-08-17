@@ -56,10 +56,10 @@ class Board{
     Agent *_zero;
     Agent *_cross;
     bool checkRow(int i, int j){
-        return board[i][j] == board[i][(j+1)%3] and board[i][(j+1)%3] == board[i][j+2%3];
+        return board[i][j] == board[i][(j+1)%3] and board[i][(j+1)%3] == board[i][(j+2)%3];
     }
     bool checkCol(int i, int j){
-        return board[i][j] == board[(i+1)%3][j] and board[(i+1)%3][j] == board[i+2%3][j];
+        return board[i][j] == board[(i+1)%3][j] and board[(i+1)%3][j] == board[(i+2)%3][j];
     }
     bool onDiag(int i, int j){
         return (i+j)==(3-1);
